@@ -14,10 +14,9 @@ if (Meteor.isServer) {
           createdAt: new Date()
         })
       })
-      console.log('hi')
 
       it('task can be deleted with method', () => {
-        const deleteUpdate = Meteor.server.method_handlers['update.remove']
+        const deleteUpdate = Meteor.server.method_handlers['updates.remove']
 
         // Set up a fake method invocation that looks like what the method expects
         const invocation = { text: 'test update' }
