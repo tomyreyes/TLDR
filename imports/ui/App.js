@@ -15,6 +15,7 @@ class App extends Component {
   }
 }
 export default withTracker(() => {
+  Meteor.subscribe('updates')
   return {
     updates: Updates.find({}).fetch()
   }

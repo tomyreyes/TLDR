@@ -9,11 +9,13 @@ class AddUpdate extends Component {
 
     // Find the text field via the React ref
     const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim()
-
+    if (text.trim() === '') {
+      return alert('Include text')
+    }
     Meteor.call('updates.insert', text)
 
-    // Clear form
     ReactDOM.findDOMNode(this.refs.textInput).value = ''
+    return
   }
 
   render() {

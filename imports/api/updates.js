@@ -7,6 +7,12 @@ import { check } from 'meteor/check'
 
 export const Updates = new Mongo.Collection('updates')
 
+if (Meteor.isServer) {
+  Meteor.publish('updates', function updatesPublication() {
+    return Updates.find()
+  })
+}
+
 Meteor.methods({
   'updates.insert'(text) {
     check(text, String)
