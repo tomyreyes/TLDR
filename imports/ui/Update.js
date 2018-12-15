@@ -1,9 +1,10 @@
 import React from 'react'
 import { Updates } from '../api/updates.js'
+import { Meteor } from 'meteor/meteor'
 
 const Update = props => {
   deleteThisUpdate = () => {
-    Updates.remove(props.update._id)
+    Meteor.call('updates.remove', props.update._id)
   }
   return (
     <React.Fragment>
