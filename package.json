@@ -18,6 +18,9 @@
       "client": "client/main.js",
       "server": "server/main.js"
     },
-    "testModule": "tests/main.js"
+    "testModule": "imports/tests/updates.tests.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0"
   }
 }
