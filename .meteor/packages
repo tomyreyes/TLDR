@@ -20,6 +20,5 @@ react-meteor-data       # React higher-order component for reactively tracking M
 meteortesting:mocha
 accounts-google
 accounts-ui
-accounts-password
 service-configuration
 google-config-ui
